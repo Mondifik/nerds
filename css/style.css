@@ -1,3 +1,17 @@
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-extra-dark: #283136;
+  --basic-grey: #eeeeee;
+  --basic-red: #fb565a;
+  --basic-green: #00ca74;
+  --basic-white: #ffffff;
+  --basic-yellow: #efc849;
+
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -6,22 +20,89 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  color: var(--basic-extra-dark);
 }
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 a {
   text-decoration: none;
 }
 
-nav ul li {
-  list-style-type: none;
-}
 /* Пока определил для полного убирания контента, потом переделаю на нормальный*/
 .visually-hidden {
   display: none;
 }
 
+/* Main navigation */
 
+.main-navigation {
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.main-navigation-wrapper {
+  background-color: var(--basic-grey);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.user-navigation a,
+.site-navigation a {
+  color: var(--basic-black);
+}
+
+.user-navigation a:hover,
+.site-navigation a:hover {
+  color: var(--basic-red);
+}
+
+.user-navigation a:active,
+.site-navigation a:active {
+  border-bottom: 2px solid var(--basic-red);
+}
+
+.slider-header {
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--basic-black);
+}
+
+.services-list {
+  list-style: none;
+}
+
+.services-item h3 {
+  font-size: 24px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+/* временное решение пока нет сетки */
+.services-item {
+  margin-top: 35px;
+}
+
+.services-item a {
+  color: var(--basic-white);
+}
+
+.btn {
+  text-transform: uppercase;
+  padding: 15px 40px;
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+}
+
+.btn-2 {
+  background-color: var(--basic-green);
+}
+
+.btn-3 {
+  background-color: var(--basic-yellow);
+}
