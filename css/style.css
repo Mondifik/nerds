@@ -11,8 +11,11 @@
 
 }
 
+.page {
+  height: 100%;
+}
 
-body {
+.page-body {
   margin: 0;
   padding: 0;
 
@@ -21,6 +24,11 @@ body {
   line-height: 24px;
   font-weight: 400;
   color: var(--basic-extra-dark);
+  min-width: 1160px;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr max-content;
+  align-content: start;
 }
 
 img {
@@ -32,6 +40,10 @@ a {
   text-decoration: none;
 }
 
+.container {
+  min-width: 1160px;
+  margin: 0 auto;
+}
 /* Пока определил для полного убирания контента, потом переделаю на нормальный*/
 .visually-hidden {
   display: none;
@@ -39,17 +51,17 @@ a {
 
 /* Main navigation */
 
-.main-navigation {
+.main-navigation-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr min-content;
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
 }
 
-.main-navigation-wrapper {
-  background-color: var(--basic-grey);
-}
-
 .site-navigation {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -68,6 +80,19 @@ a {
   border-bottom: 2px solid var(--basic-red);
 }
 
+.slider {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.slider img {
+  margin-right: 20px;
+}
+
+.services {
+  margin: 80px 0;
+}
+
 .slider-header {
   font-size: 55px;
   line-height: 55px;
@@ -76,7 +101,11 @@ a {
 }
 
 .services-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .services-item h3 {
@@ -108,6 +137,12 @@ a {
   background-color: var(--basic-yellow);
 }
 
+.about-us{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 80px;
+}
+
 .about-us-header {
   font-size: 45px;
   line-height: 45px;
@@ -122,6 +157,10 @@ a {
 .about-us-list p {
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.about-us-right {
+  justify-self: end;
 }
 
 .about-us-right p {
@@ -143,6 +182,13 @@ a {
 .table-td {
   font-size: 16px;
   line-height: 18px;
+}
+
+.produced {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  margin-bottom: 125px;
 }
 
 .main-form legend {
@@ -169,4 +215,17 @@ a {
 
 .catalog-list {
   list-style: none;
+}
+
+.main-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-page h1 {
+  grid-column: 1 / -1;
+}
+
+.filter {
+
 }
